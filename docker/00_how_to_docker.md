@@ -21,3 +21,14 @@
 21. Create another virtual machine with `docker-machine` using the `virtualbox` driver, and name it `Aiur`.
 22. Turn `Aiur` into a slave of the local swarm in which `Char` is leader (the command to take control of `Aiur` is not requested).
 23. Create an overlay-type internal network that you will name `overmind`.
+24. Launch a `rabbitmq` SERVICE that will be named `orbital-command`. You should define a specific user and password for the RabbitMQ service, they can be whatever you want. This service will be on the `overmind` network.
+25. List all the services of the local swarm.
+26. Launch a `42school/engineering-bay` service in two replicas and make sure that the service works properly (see the documentation provided at hub.docker.com). This service will be named `engineering-bay` and will be on the `overmind` network.
+27. Get the real-time logs of one the tasks of the `engineering-bay` service.
+28. ... Damn it, a group of zergs is attacking `orbital-command`, and shutting down the `engineering-bay` service won’t help at all... You must send a troup of Marines to eliminate the intruders. Launch a `42school/marine-squad` in two replicas, and make sure that the service works properly (see the documentation provided at hub.docker.com). This service will be named... `marines` and will be on the `overmind` network.
+29. Display all the tasks of the `marines` service.
+30. Increase the number of copies of the `marines` service up to twenty, because there’s never enough Marines to eliminate Zergs. (Remember to take a look at the tasks and logs of the service, you’ll see, it’s fun.)
+31. Force quit and delete all the services on the local swarm, in one command.
+32. Force quit and delete all the containers (whatever their status), in one command.
+33. Delete all the container images stored on the `Char` virtual machine, in one command as well.
+34. Delete the `Aiur` virtual machine without using `rm -rf`.
